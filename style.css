@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background: black;
+}
+
+.inputSearch {
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.inputSearch input {
+    background: black;
+    height: 50px;
+    border: none;
+    color: white;
+    outline: none;
+   
+}
+
+.inputSearch hr {
+    width: 23em;
+}
+#result {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17em;    
+}
+#resultText{
+    color: white;
+    font-size: 30px;
+}
+#nameOfResult {
+    color: white;
+    font-size: 30px;
+}
