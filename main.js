@@ -8,18 +8,24 @@ function checkTheSentence (input) {
             let sentence = input.value;
             const arrayOfSentence = sentence.split(' ');
             for(let i = 0; i < arrayOfSentence.length; i++ ){
-                checkTheLetterForSentence(arrayOfSentence[i])
+                checkTheLetterForSentence(arrayOfSentence[i], sentence)
             }
 
         }
 
     })
 }
-function checkTheLetterForSentence (word) {
+function checkTheLetterForSentence (word, sentence) {
+//    console.log(sentence)
+  //  console.log(word)
+    
     const letter = word.charAt(word.length-1);
-    console.log(letter)
+    addLetter(letter, word, sentence)
 }
 
+function replaceTheSentenceWords () {
+
+}
 
 
 checkTheSentence(input)
@@ -31,14 +37,17 @@ checkTheSentence(input)
 //             const inputWord = input.value;
 //             console.log(inputWord)
 //             const letter = inputWord.charAt(inputWord.length-1);
-//             //addLetter(letter, inputWord);
+//             addLetter(letter, inputWord);
 //         }
 //     });
 // }
-// function addLetter (letter, inputWord) {
-//     if(letter === "ա" || letter === "ո"){
-//         const newWord = inputWord + "յ";
-//         result.innerHTML = newWord;
-//     } 
-// }
+
+function addLetter (letter, inputWord, sentence) {
+    if(letter === "ա" || letter === "ո"){
+        const newWord = inputWord + "յ";
+        let a = sentence.replace(inputWord, newWord)
+        console.log(a)
+        result.innerHTML = a;
+    } 
+}
 // checkTheLetter(input)
